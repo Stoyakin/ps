@@ -22,29 +22,30 @@ block main-content
           
 
 block aside
-  aside.main__aside
+  aside.main__aside.active.show-step1
     +b('form').from-search
-      +e('p').title Ссылка на картинку
-      +e('input')(type="input").input
+      +e.top
+        +e('p').title Ссылка на картинку
+        +e('input')(type="input" data-req="req").input
       +e('button')(type="submit").submit
         include ../svg/plus.svg
     
     +b('ul').tutorial
-      +e('li').item.--step1
+      +e('li')(data-step="01").item.--step1
         +e.item-count
           +e('p').item-count-active 1
           +e('p').item-count-all 3
-        +e('p').item-descr Введите вдрес картинки в белое текстовое поле
+        +e('p').item-descr Введите aдрес картинки в белое текстовое поле
         +e('button')(type="button").item-next.btn.--red.js-help-next Далее
         +e('button')(type="button").item-close.js-help-close Пропустить
-      +e('li').item.--step2
+      +e('li')(data-step="02").item.--step2
         +e.item-count
           +e('p').item-count-active 2
           +e('p').item-count-all 3
         +e('p').item-descr После, нажите красную кнопку, чтобы добавить картинку в слайдер
         +e('button')(type="button").item-next.btn.--red.js-help-next Далее
         +e('button')(type="button").item-close.js-help-close Пропустить
-      +e('li').item.--mirror.--step3
+      +e('li')(data-step="03").item.--mirror.--step3
         +e.item-count
           +e('p').item-count-active 3
           +e('p').item-count-all 3

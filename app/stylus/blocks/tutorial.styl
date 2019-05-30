@@ -1,22 +1,78 @@
 .tutorial
+  position absolute
+  left 0
+  top 0
+  width 0
+  height 100%
   z-index 2
+  //display none
   &__item
     display flex
     flex-direction column
     justify-content flex-end
     text-align right
     position absolute
+    display none
     &--step1
-      top 93px
-      left -320px
+      display flex
+      top 76px
+      left -448px
     &--step2
-      display none
+      bottom 34px
+      left -448px
     &--step3
-      display none
+      left 40px
+      top 169px
+    &--mirror
+      justify-content flex-start
+      text-align left
+      max-width 180px
+      .tutorial__item
+        &-descr
+          max-width 180px
+        &-count
+          margin-left 0
+          margin-right auto
+          &:after
+            right -4px
+        &-next, &-close
+          align-self flex-start
+    @media (max-height: 800px)
+      position fixed
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+      z-index 2
+      justify-content center
+      text-align center
+      max-width 350px
+      margin-left -130px
+      .tutorial__item
+        &-descr
+          max-width 350px
+        &-count
+          justify-content center
+          margin-left 0
+          margin-right 0
+          &:after
+            right auto
+            left 50%
+            transform translateX(-50%)
+        &-next, &-close
+          align-self center
+    @media $mLandscapeMax
+      margin-left 0
     &-count
       display inline-flex
       position relative
       margin-left auto
+      &:after
+        @extend .after
+        bottom -6px
+        right -78px
+        width 121px
+        height 1px
+        background-color #fff
       &-active, &-all
         color #fff
         font-size 24px
@@ -34,13 +90,15 @@
           line-height 26px
           margin-right 5px
     &-descr
-      max-width 280px
+      /*max-width 280px*/
+      width 100vw
+      max-width 410px
       color #fff
       font-size 24px
       line-height 36px
-      margin-top 20px
+      margin-top 24px
     &-next
-      margin-top 25px
+      margin-top 19px
       align-self flex-end
     &-close
       display inline-block

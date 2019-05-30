@@ -5,12 +5,13 @@ block variables
   - var tmpsrc = 'static/img/';
 
 block header
-  +b('header').header
+  +b('header').header.--dark
     +e.row
       +b('a')(href="#").logo.--white
         include ../svg/ps-logo.svg
-      +b('a')(href="#").logo.--ytb
+      +b('a')(href="#").logo.--ytb.--white
         include ../svg/ytb-logo.svg
         
 block main
-  a(href="#").main__btn-start.btn Начать
+  .main__content.main__content--dark
+    a(href="#").main__btn-start.btn Начать

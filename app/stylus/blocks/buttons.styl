@@ -16,8 +16,11 @@ button
   line-height 26px
   background-color white
   border-radius 10px
-  padding 16px 25px 18px
+  padding 18px 25px 16px
   min-width 200px
+  transition color .5s
+  &:hover
+    color rgba($darkGray, .7)
   &--red
     border-radius 3px
     color #fff
@@ -25,3 +28,5 @@ button
     background-color $red
     padding-top 6px
     padding-bottom 8px
+    &:hover
+      color rgba(#fff, .7)

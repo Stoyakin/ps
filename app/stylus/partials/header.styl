@@ -1,6 +1,8 @@
 .header
-  padding 37px 40px 38px
+  padding 38px 40px 37px
   background-color #fff
+  @media $mLandscapeMax
+    padding 20px 20px 13px
   &__row
     display flex
     justify-content space-between
@@ -9,6 +11,11 @@
     color $black
     font-size 40px
     line-height 44px
-    margin-left 35px
+    margin-left 39px
     margin-right auto
+    opacity 0
+    @media $mLandscapeMax
+      display none
+  &--dark
+    background-color #2F2F2F
 

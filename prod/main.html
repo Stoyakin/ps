@@ -71,10 +71,12 @@
             </div>
           </div>
         </div>
-        <aside class="main__aside">
+        <aside class="main__aside active show-step1">
           <form class="from-search">
-            <p class="from-search__title">Ссылка на картинку
-            </p><input class="from-search__input" type="input"/>
+            <div class="from-search__top">
+              <p class="from-search__title">Ссылка на картинку
+              </p><input class="from-search__input" type="input" data-req="req"/>
+            </div>
             <button class="from-search__submit" type="submit"><svg class="ico-plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="plus" x="0px" y="0px" version="1.1" viewBox="0 0 459.325 459.325" xml:space="preserve">
     <g>
         <path d="M459.319,229.668c0,22.201-17.992,40.193-40.205,40.193H269.85v149.271c0,22.207-17.998,40.199-40.196,40.193
@@ -88,21 +90,21 @@
             </button>
           </form>
           <ul class="tutorial">
-            <li class="tutorial__item tutorial__item--step1">
+            <li class="tutorial__item tutorial__item--step1" data-step="01">
               <div class="tutorial__item-count">
                 <p class="tutorial__item-count-active">1
                 </p>
                 <p class="tutorial__item-count-all">3
                 </p>
               </div>
-              <p class="tutorial__item-descr">Введите вдрес картинки в белое текстовое поле
+              <p class="tutorial__item-descr">Введите aдрес картинки в белое текстовое поле
               </p>
               <button class="tutorial__item-next btn btn--red js-help-next" type="button">Далее
               </button>
               <button class="tutorial__item-close js-help-close" type="button">Пропустить
               </button>
             </li>
-            <li class="tutorial__item tutorial__item--step2">
+            <li class="tutorial__item tutorial__item--step2" data-step="02">
               <div class="tutorial__item-count">
                 <p class="tutorial__item-count-active">2
                 </p>
@@ -116,7 +118,7 @@
               <button class="tutorial__item-close js-help-close" type="button">Пропустить
               </button>
             </li>
-            <li class="tutorial__item tutorial__item--mirror tutorial__item--step3">
+            <li class="tutorial__item tutorial__item--mirror tutorial__item--step3" data-step="03">
               <div class="tutorial__item-count">
                 <p class="tutorial__item-count-active">3
                 </p>

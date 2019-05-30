@@ -2,7 +2,18 @@
   .ps-logo
     width 104px
     height 80px
+    @media $mLandscapeMax
+      width 52px
+      height 41px
   &--ytb
     .ytb-logo
       width 178px
       height 40px
+      @media $mLandscapeMax
+        width 90px
+        height 20px
+  &--white
+    .ps-logo path
+      fill #fff !important
+    .ytb-logo .c
+      fill #fff !important
