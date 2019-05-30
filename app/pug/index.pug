@@ -1,0 +1,16 @@
+extends includes/template/base.pug
+
+block variables
+  - var title = "Главная";
+  - var tmpsrc = 'static/img/';
+
+block header
+  +b('header').header
+    +e.row
+      +b('a')(href="#").logo.--white
+        include ../svg/ps-logo.svg
+      +b('a')(href="#").logo.--ytb
+        include ../svg/ytb-logo.svg
+        
+block main
+  a(href="#").main__btn-start.btn Начать

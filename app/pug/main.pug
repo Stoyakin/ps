@@ -1,0 +1,53 @@
+extends includes/template/base.pug
+
+block variables
+  - var title = "Главная";
+  - var tmpsrc = 'static/img/';
+
+block main-content
+  .main__content
+    .main__slider
+      .swiper-container.js-swiper-slider
+        .swiper-wrapper
+          .swiper-slide.main__slider-slide(style="background-image: url('"+tmpsrc+"img.jpg')")
+          .swiper-slide.main__slider-slide(style="background-image: url('"+tmpsrc+"img2.jpg')")
+        .swiper-buttons
+          button(type="button").swiper-button-prev
+            include ../svg/arrow.svg
+          button(type="button").swiper-button-next
+            include ../svg/arrow.svg
+        .swiper-count
+          p.swiper-count-item 1
+          p.swiper-count-all 2
+          
+
+block aside
+  aside.main__aside
+    +b('form').from-search
+      +e('p').title Ссылка на картинку
+      +e('input')(type="input").input
+      +e('button')(type="submit").submit
+        include ../svg/plus.svg
+    
+    +b('ul').tutorial
+      +e('li').item.--step1
+        +e.item-count
+          +e('p').item-count-active 1
+          +e('p').item-count-all 3
+        +e('p').item-descr Введите вдрес картинки в белое текстовое поле
+        +e('button')(type="button").item-next.btn.--red.js-help-next Далее
+        +e('button')(type="button").item-close.js-help-close Пропустить
+      +e('li').item.--step2
+        +e.item-count
+          +e('p').item-count-active 2
+          +e('p').item-count-all 3
+        +e('p').item-descr После, нажите красную кнопку, чтобы добавить картинку в слайдер
+        +e('button')(type="button").item-next.btn.--red.js-help-next Далее
+        +e('button')(type="button").item-close.js-help-close Пропустить
+      +e('li').item.--mirror.--step3
+        +e.item-count
+          +e('p').item-count-active 3
+          +e('p').item-count-all 3
+        +e('p').item-descr Можно увидеть новую картинку
+        +e('button')(type="button").item-next.btn.--red.js-help-next Далее
+        +e('button')(type="button").item-close.js-help-close Пропустить

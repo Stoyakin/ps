@@ -1,0 +1,20 @@
+block variables
+
+include ../bemto/bemto.pug
+include ../__mixins.pug
+
+doctype html
+html(lang="ru")
+  block head
+    include ../partials/head
+
+  body
+    .wrapper
+      block header
+        include ../partials/header
+      main.main
+        block main
+          block main-content
+          block aside
+    block scripts
+      include ../partials/scripts
